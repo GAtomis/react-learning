@@ -1,3 +1,63 @@
+## 学习笔记
+
+###  起步
+#### 根目录建立
+1. 在src下建立index文件
+2. 将react核心引入
+```
+
+import React from 'react'
+import ReactDom from 'react-dom'
+import App from './01-base/class-components'
+
+import App1 from './01-base/FP-components'
+ReactDom.render(<App1></App1>,document.getElementById('root'))
+```
+### 组件
+#### class组件
+通过ES6的模块导出,导出自定义class类并继承react.Component从而实现类组件的实现
+```
+//xml自动实例化组件
+class App extends React.Component{
+    render:()=><h1></h1>
+
+}
+```
+#### 函数式组件
+通过函数式方式导出jsx,在16.8以后的版本具有函数式特性状态保存
+```
+export default const FP=(params)=><h1>函数式组件</h1>
+```
+
+#### 父子组件嵌套关系
+通过以上两个方式FP或者Class都可以实现组件互相嵌套
+详情看01-class/child-components.js
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
