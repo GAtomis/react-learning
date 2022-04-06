@@ -33,6 +33,15 @@ export default const FP=(params)=><h1>函数式组件</h1>
 通过以上两个方式FP或者Class都可以实现组件互相嵌套
 详情看01-class/child-components.js
 
+#### 样式组件
+通过花括号的方式在进行表达式书写
+```
+        {/* 三种方式 */}
+        <div style={objStyle}>{window.location.origin}</div>
+        <div style={{ background: 'red' }} >{window.location.origin}</div>
+        <div className="active" >{window.location.origin}</div>
+
+```
 
 
 
