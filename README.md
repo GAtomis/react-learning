@@ -38,6 +38,7 @@ export default const FP=(params)=><h1>函数式组件</h1>
 ```
         {/* 三种方式 */}
         <div style={objStyle}>{window.location.origin}</div>
+        官方推荐
         <div style={{ background: 'red' }} >{window.location.origin}</div>
         <div className="active" >{window.location.origin}</div>
 
