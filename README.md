@@ -13,7 +13,7 @@ import App from './01-base/class-components'
 import App1 from './01-base/FP-components'
 ReactDom.render(<App1></App1>,document.getElementById('root'))
 ```
-### 组件
+### 一 组件
 #### class组件
 通过ES6的模块导出,导出自定义class类并继承react.Component从而实现类组件的实现
 ```
@@ -44,8 +44,7 @@ export default const FP=(params)=><h1>函数式组件</h1>
 
 ```
 
-### react中的事件处理
-
+### 二 事件
 #### 类组件事件一（定义）
 1. 通过定义类方法去
 2. 通过直接嵌入jsx中去写表达式
@@ -60,6 +59,35 @@ export default const FP=(params)=><h1>函数式组件</h1>
 1. react通过事件冒泡的方式去捕获当前事件,并去反射当前组件所有的绑定事件并去匹配它
 2. 完美继承了当前event
 
+
+### 综合
+#### ref
+获取组件或者当前dom,react17推荐以下方式获取
+js
+```
+//声明一个ref
+ myRef=React.createRef()
+ 获取ref
+ nowDom=myRef.current
+
+```
+jsx
+```
+      <input ref={this.myRef} />
+```
+#### 状态
+在class组件中有一个固定的状态值(类似vue中的data),通过setState方法修改状态值实现数据和视图同步渲染和更新
+个人理解将组件转化为vnode进行diff比较进行视图更新
+```
+state={
+    isText:0,
+    text:"zhounan"
+}
+handleClick(){  
+  this.setState({isText:!this.state.isText})
+}
+
+```
 
 
 

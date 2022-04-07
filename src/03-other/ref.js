@@ -1,8 +1,8 @@
 /*
  * @Description: 请输入....
  * @Author: Gavin
- * @Date: 2022-04-07 16:01:16
- * @LastEditTime: 2022-04-07 18:40:04
+ * @Date: 2022-04-07 17:02:51
+ * @LastEditTime: 2022-04-07 18:50:15
  * @LastEditors: Gavin
  */
 
@@ -13,10 +13,11 @@ import React, { Component } from 'react'
 
 export default class event extends Component {
   a="变量A"
+  myRef=React.createRef()
   render() {
     return (
       <div>
-        <input />
+        <input ref={this.myRef} />
         <button onClick={() => {
           console.log("出发",this.a);
         }}>add</button>
@@ -27,7 +28,8 @@ export default class event extends Component {
     )
   }
   handleClick = () => {
-    console.warn(123399,this);
+    console.warn(123399,this.myRef.current);
+
 
 
   }
