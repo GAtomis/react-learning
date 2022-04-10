@@ -120,7 +120,23 @@ this.state.list.map((item, index) => <li key={index}>{item}<button onClick={() =
 ```
 >是否隐藏(类似vue中v-show)
 ```
+    <h1 className={!this.state.isShow&&'hidden'}>v-show的效果{this.state.isShow.toString()}</h1>
 ```
+#### RTF(富文本)
+> path:./src/03-other/rtf
+
+通过设置标签中属性进行HTML标签转义(HTML)
+```
+//通过设置dangerouslySetInnerHTML来转义文本中的HTML标签
+this.state.list.map((item, index) => <li key={index}><span dangerouslySetInnerHTML={{
+      __html: item
+    }}></span><button onClick={() => this.delClick(index)}>del</button></li>)
+```
+
+
+
+
+
 
 
 

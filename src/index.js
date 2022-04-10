@@ -2,7 +2,7 @@
  * @Description: react入口文件
  * @Author: Gavin
  * @Date: 2022-04-02 23:47:53
- * @LastEditTime: 2022-04-08 09:11:19
+ * @LastEditTime: 2022-04-11 00:00:01
  * @LastEditors: Gavin
  */
 import React from 'react'
@@ -16,5 +16,6 @@ import ReactDom from 'react-dom'
 // import App from './02-event/event-2'
 // import App from './03-other/ref'
 // import App from './03-other/state'
-import App from './03-other/forEach'
+// import App from './03-other/forEach'
+import App from './03-other/rtf'
 ReactDom.render(<App></App>,document.getElementById('root'))
