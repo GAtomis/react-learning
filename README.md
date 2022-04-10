@@ -62,7 +62,7 @@ export default const FP=(params)=><h1>函数式组件</h1>
 
 ## 三 综合
 ### ref(获取DOM或组件)
->path:./src/03-other/ref
+[案例](./src/03-other/ref)
 
 获取组件或者当前dom,react17推荐以下方式获取
 js
@@ -79,7 +79,7 @@ jsx
 ```
 
 ### 组件中的状态
-<br/>
+[案例](./src/03-other/state.js)
 
 重点！重点！在class组件中有一个固定的状态值(类似vue中的data),通过setState方法修改状态值实现数据和视图同步渲染和更新
 个人理解将组件转化为vnode进行diff比较进行视图更新
@@ -104,7 +104,8 @@ handleClick(){
   }
 ```
 ### 列表渲染
->path:./src/forEach
+[案例](./src/03-other/forEach.js)
+
 
 通过map迭代插入jsx进行列表渲染
 ```
@@ -124,7 +125,7 @@ this.state.list.map((item, index) => <li key={index}>{item}<button onClick={() =
     <h1 className={!this.state.isShow&&'hidden'}>v-show的效果{this.state.isShow.toString()}</h1>
 ```
 ### RTF(富文本)
-> path:./src/03-other/rtf
+[案例](./src/03-other/rtf.js)
 
 通过设置标签中属性进行HTML标签转义(类似Vue2 v-html)
 ```
