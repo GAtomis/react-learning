@@ -1,7 +1,7 @@
-## 学习笔记
+# 学习笔记
 
-###  起步
-#### 根目录建立
+##  序章
+### 根目录建立
 1. 在src下建立index文件
 2. 将react核心引入
 ```
@@ -13,8 +13,8 @@ import App from './01-base/class-components'
 import App1 from './01-base/FP-components'
 ReactDom.render(<App1></App1>,document.getElementById('root'))
 ```
-### 一 组件
-#### class组件
+## 一 组件
+### class组件
 通过ES6的模块导出,导出自定义class类并继承react.Component从而实现类组件的实现
 ```
 //xml自动实例化组件
@@ -23,17 +23,17 @@ class App extends React.Component{
 
 }
 ```
-#### 函数式组件
+### 函数式组件
 通过函数式方式导出jsx,在16.8以后的版本具有函数式特性状态保存
 ```
 export default const FP=(params)=><h1>函数式组件</h1>
 ```
 
-#### 父子组件嵌套关系
+### 父子组件嵌套关系
 通过以上两个方式FP或者Class都可以实现组件互相嵌套
 详情看01-class/child-components.js
 
-#### 样式组件
+### 样式组件
 通过花括号的方式在进行表达式书写
 ```
         {/* 三种方式 */}
@@ -44,24 +44,24 @@ export default const FP=(params)=><h1>函数式组件</h1>
 
 ```
 
-### 二 事件
-#### 类组件事件一（定义）
+## 二 事件
+### 类组件事件一（定义）
 1. 通过定义类方法去
 2. 通过直接嵌入jsx中去写表达式
 3. 通过类中定义方法名在jsx中直接this指向当前类（推荐使用箭头函数）
 
-#### 类组件事件二（种类）
+### 类组件事件二（种类）
 1. 类组件中直接使用当前类中定义的方法
 2. 普通函数this指向问题通过bind去改变this指向
 3. 不使用普通函数使用箭头函数this指向直接继承他外层的作用域类组件
 
-#### 类组件事件三（事件代理）
+### 类组件事件三（事件代理）
 1. react通过事件冒泡的方式去捕获当前事件,并去反射当前组件所有的绑定事件并去匹配它
 2. 完美继承了当前event
 
 
-### 三 综合
-#### ref(获取DOM或组件)
+## 三 综合
+### ref(获取DOM或组件)
 >path:./src/03-other/ref
 
 获取组件或者当前dom,react17推荐以下方式获取
@@ -78,7 +78,7 @@ jsx
       <input ref={this.myRef} />
 ```
 
-#### <font color=red size=2>状态</font>
+### 组件中的状态
 <br/>
 
 重点！重点！在class组件中有一个固定的状态值(类似vue中的data),通过setState方法修改状态值实现数据和视图同步渲染和更新
@@ -103,7 +103,7 @@ handleClick(){
 
   }
 ```
-#### 列表渲染
+### 列表渲染
 >path:./src/forEach
 
 通过map迭代插入jsx进行列表渲染
@@ -123,7 +123,7 @@ this.state.list.map((item, index) => <li key={index}>{item}<button onClick={() =
 ```
     <h1 className={!this.state.isShow&&'hidden'}>v-show的效果{this.state.isShow.toString()}</h1>
 ```
-#### RTF(富文本)
+### RTF(富文本)
 > path:./src/03-other/rtf
 
 通过设置标签中属性进行HTML标签转义(类似Vue2 v-html)
