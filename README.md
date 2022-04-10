@@ -77,8 +77,9 @@ jsx
 ```
       <input ref={this.myRef} />
 ```
- <font color=red size=2>状态</font>
- <br/>
+
+<font color=red size=2>状态</font>
+<br/>
 
 重点！重点！在class组件中有一个固定的状态值(类似vue中的data),通过setState方法修改状态值实现数据和视图同步渲染和更新
 个人理解将组件转化为vnode进行diff比较进行视图更新
