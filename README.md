@@ -101,6 +101,14 @@ handleClick(){
   }
 ```
 #### 列表渲染
+通过map迭代插入jsx进行列表渲染
+```
+this.state.list.map((item, index) => <li key={index}>{item}<button onClick={() => this.delClick(index)}>del</button></li>)
+
+```
+如何进行条件渲染
+
+
 
 
 
