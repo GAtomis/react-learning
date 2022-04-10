@@ -61,7 +61,7 @@ export default const FP=(params)=><h1>函数式组件</h1>
 
 
 ### 三 综合
-#### ref
+#### ref(获取DOM或组件)
 >path:./src/03-other/ref
 
 获取组件或者当前dom,react17推荐以下方式获取
@@ -126,7 +126,7 @@ this.state.list.map((item, index) => <li key={index}>{item}<button onClick={() =
 #### RTF(富文本)
 > path:./src/03-other/rtf
 
-通过设置标签中属性进行HTML标签转义(HTML)
+通过设置标签中属性进行HTML标签转义(类似Vue2 v-html)
 ```
 //通过设置dangerouslySetInnerHTML来转义文本中的HTML标签
 this.state.list.map((item, index) => <li key={index}><span dangerouslySetInnerHTML={{
