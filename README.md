@@ -62,6 +62,7 @@ export default const FP=(params)=><h1>函数式组件</h1>
 
 ### 综合
 #### ref
+>path:./src/03-other/ref
 获取组件或者当前dom,react17推荐以下方式获取
 js
 ```
@@ -101,12 +102,22 @@ handleClick(){
   }
 ```
 #### 列表渲染
+>path:./src/forEach
 通过map迭代插入jsx进行列表渲染
 ```
 this.state.list.map((item, index) => <li key={index}>{item}<button onClick={() => this.delClick(index)}>del</button></li>)
 
 ```
 如何进行条件渲染
+
+>是否渲染(类似vue中v-if)
+```
+//标签内容 三目运算也可以使用if推荐三目运算
+ <h1 className={this.state.isText&&'red'}>{this.state.isText ? text : 'isText为false'}</h1>
+ //jsx 条件运算符
+{this.state.isIf&&<h1 >v-if的效果{this.state.isIf.toString()}</h1>}
+```
+>是否隐藏(类似vue中v-show)
 
 
 
