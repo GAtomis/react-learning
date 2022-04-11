@@ -134,8 +134,13 @@ this.state.list.map((item, index) => <li key={index}><span dangerouslySetInnerHT
       __html: item
     }}></span><button onClick={() => this.delClick(index)}>del</button></li>)
 ```
+### Demo-选项卡
+通过模块化的方式实现tabBar切换
+[案例](./src/04-demo/tabBar.js)
 
-
+### Demo-axios
+在react中使用axios进行网络请求
+[案例](./src/04-demo/axios.js)
 
 
 
