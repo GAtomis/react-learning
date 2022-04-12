@@ -2,7 +2,7 @@
  * @Description: react入口文件
  * @Author: Gavin
  * @Date: 2022-04-02 23:47:53
- * @LastEditTime: 2022-04-12 17:02:37
+ * @LastEditTime: 2022-04-12 18:27:34
  * @LastEditors: Gavin
  */
 import React from 'react'
@@ -21,5 +21,6 @@ import ReactDom from 'react-dom'
 // import App from './04-demo/tabBar'
 // import App from './04-demo/axios'
 // import App from './03-other/async-state'
-import App from './04-demo/better-scroll'
+// import App from './04-demo/better-scroll'
+import App from './03-other/props'
 ReactDom.render(<App></App>,document.getElementById('root'))

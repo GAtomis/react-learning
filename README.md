@@ -78,7 +78,7 @@ jsx
       <input ref={this.myRef} />
 ```
 
-### 组件中的状态
+### `组件中的状态`
 [案例](./src/03-other/state.js)
 
 重点！重点！在class组件中有一个固定的状态值(类似vue中的data),通过setState方法修改状态值实现数据和视图同步渲染和更新
@@ -103,7 +103,7 @@ handleClick(){
 
   }
 ```
-### 列表渲染
+### `列表渲染`
 [案例](./src/03-other/forEach.js)
 
 
@@ -140,6 +140,37 @@ this.state.list.map((item, index) => <li key={index}>{item}<button onClick={() =
 this.state.list.map((item, index) => <li key={index}><span dangerouslySetInnerHTML={{
       __html: item
     }}></span><button onClick={() => this.delClick(index)}>del</button></li>)
+```
+### `props(属性)`
+#### 通过属性传参的方式进行父组件向子组件传递
+```
+<nav :value={{title:1}}/>
+```
+#### 子组件接受参数
+```
+//结束属性
+    return (
+      <div>{this.props.title}</div>
+    )
+  }
+
+```
+#### 属性验证规则(子组件类似vue.prop)
+```
+//react 18后prop-types需要独立依赖
+import PropTypes from 'prop-types'; // ES6
+NavBar.propTypes={
+  title:PropTypes.string,
+  isShow:PropTypes.bool
+}
+```
+#### 默认属性
+当父组件未传参时默认参数设置
+```
+NavBar.defaultProps={
+    title:"默认标题",
+    isShow:true
+  }
 ```
 
 ### Demo-选项卡
