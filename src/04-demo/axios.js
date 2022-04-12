@@ -2,16 +2,10 @@
  * @Description: 请输入....
  * @Author: Gavin
  * @Date: 2022-04-11 13:45:38
- * @LastEditTime: 2022-04-11 14:09:00
+ * @LastEditTime: 2022-04-11 17:46:05
  * @LastEditors: Gavin
  */
-/*
- * @Description: 选项卡
- * @Author: Gavin
- * @Date: 2022-04-11 10:06:52
- * @LastEditTime: 2022-04-11 12:34:11
- * @LastEditors: Gavin
- */
+
 // 选项卡
 import React, { Component } from 'react'
 import './css/index.css'
