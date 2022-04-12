@@ -2,7 +2,7 @@
  * @Description: 请输入....
  * @Author: Gavin
  * @Date: 2022-04-08 09:08:08
- * @LastEditTime: 2022-04-10 23:02:58
+ * @LastEditTime: 2022-04-12 19:36:46
  * @LastEditors: Gavin
  */
 
@@ -41,7 +41,7 @@ export default class event extends Component {
        {!this.state.list.length&&<div>暂无内容</div>} 
        <h1 className={this.state.isText&&'red'}>{this.state.isText ? text : 'isText为false'}</h1>
     
-        <h1 className={!this.state.isShow&&'hidden'}>v-show的效果{this.state.isShow.toString()}</h1>
+    ‘
         {this.state.isIf&&<h1 >v-if的效果{this.state.isIf.toString()}</h1>}
       </div>
     )

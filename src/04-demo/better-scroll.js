@@ -2,7 +2,7 @@
  * @Description: 请输入....
  * @Author: Gavin
  * @Date: 2022-04-12 15:53:25
- * @LastEditTime: 2022-04-12 17:42:34
+ * @LastEditTime: 2022-04-12 19:36:54
  * @LastEditors: Gavin
  */
 import React, { Component } from 'react'
@@ -21,7 +21,6 @@ export default class betterScroll extends Component {
           <ul className="content">
                 {
                   this.state.list.map((item,index)=><li key={index} style={{margin:"30px",fontSize:"30px"}}>{item}</li>)
-
 
                 }
           </ul>
