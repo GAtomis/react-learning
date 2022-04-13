@@ -124,7 +124,7 @@ this.state.list.map((item, index) => <li key={index}>{item}<button onClick={() =
 ```
 
 
-### [async-state](./src/03-other/asyncState.js)
+### [async-state(异步的状态)](./src/03-other/asyncState.js)
 异步单项绑定数据特性如下
 1. 如果setState处于异步回调函数中类似setTimeout,Promise,他是同步的更新状态不执行合并操作
 2. 如果setState处于同步函数中进行执行,他将会是异步合并处理的更新状态
