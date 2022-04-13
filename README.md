@@ -1,5 +1,5 @@
 # 学习笔记
-
+受到疫情影响,正好有时间去学习除vue以外优秀的前端框架,react作为目前前端生态最好的框架体系,又是函数式编程最好的实现者,抱着敬畏之心去学习他。希望我的学习时间不会很长,时间越多疫情越严重,上海加油!中国加油！-中国码农
 ##  序章
 ### 根目录建立
 1. 在src下建立index文件
@@ -188,7 +188,20 @@ NavBar.defaultProps={
 5. 属性设置子组件初始值，状态不可以
 6. 属性可以修改子组件的值,状态不可以
 
-
+#### react vs vue 区别
+数据流处理方式
+```
+//vue双向绑定
+<input v-model="value">
+//约等于
+<input :value="value" :onChange="(new)=>(value=new)">
+//react 单向数据流
+<input value={this.state.value} onChange={(new)=>{
+  this.setState({
+    value:new
+  })
+}}>
+```
 
 ### Demo-选项卡
 [案例](./src/04-demo/tabBar.js)
