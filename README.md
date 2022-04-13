@@ -112,18 +112,20 @@ handleClick(){
 this.state.list.map((item, index) => <li key={index}>{item}<button onClick={() => this.delClick(index)}>del</button></li>)
 
 ```
-如何进行条件渲染
->是否渲染(类似vue中v-if)
+### 条件渲染
+#### 是否渲染(类似vue中v-if)
 ```
 //标签内容 三目运算也可以使用if推荐三目运算
  <h1 className={this.state.isText&&'red'}>{this.state.isText ? text : 'isText为false'}</h1>
  //jsx 条件运算符
 {this.state.isIf&&<h1 >v-if的效果{this.state.isIf.toString()}</h1>}
 ```
->是否隐藏(类似vue中v-show)
+#### 是否隐藏(类似vue中v-show)
 ```
     <h1 className={!this.state.isShow&&'hidden'}>v-show的效果{this.state.isShow.toString()}</h1>
 ```
+
+
 ### async-state(异步单项绑定数据特性)
 [案例](./src/03-other/asyncState.js)
 特性
