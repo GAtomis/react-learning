@@ -14,7 +14,7 @@ import App1 from './01-base/FP-components'
 ReactDom.render(<App1></App1>,document.getElementById('root'))
 ```
 ## 一 组件
-### class组件
+### 1. class组件
 通过ES6的模块导出,导出自定义class类并继承react.Component从而实现类组件的实现
 ```
 //xml自动实例化组件
@@ -23,17 +23,17 @@ class App extends React.Component{
 
 }
 ```
-### 函数式组件
+### 2. 函数式组件
 通过函数式方式导出jsx,在16.8以后的版本具有函数式特性状态保存
 ```
 export default const FP=(params)=><h1>函数式组件</h1>
 ```
 
-### 父子组件嵌套关系
+### 3. 父子组件嵌套关系
 通过以上两个方式FP或者Class都可以实现组件互相嵌套
 详情看01-class/child-components.js
 
-### 样式组件
+### 4. 样式组件
 通过花括号的方式在进行表达式书写
 ```
         {/* 三种方式 */}
@@ -45,23 +45,23 @@ export default const FP=(params)=><h1>函数式组件</h1>
 ```
 
 ## 二 事件
-### 类组件事件一（定义）
+### 1. 类组件事件一（定义）
 1. 通过定义类方法去
 2. 通过直接嵌入jsx中去写表达式
 3. 通过类中定义方法名在jsx中直接this指向当前类（推荐使用箭头函数）
 
-### 类组件事件二（种类）
+### 2. 类组件事件二（种类）
 1. 类组件中直接使用当前类中定义的方法
 2. 普通函数this指向问题通过bind去改变this指向
 3. 不使用普通函数使用箭头函数this指向直接继承他外层的作用域类组件
 
-### 类组件事件三（事件代理）
+### 3. 类组件事件三（事件代理）
 1. react通过事件冒泡的方式去捕获当前事件,并去反射当前组件所有的绑定事件并去匹配它
 2. 完美继承了当前event
 
 
 ## 三 综合
-### [ref](./src/03-other/ref)
+### 1. [ref](./src/03-other/ref)
 获取组件或者当前dom,react17推荐以下方式获取
 js
 ```
@@ -76,7 +76,7 @@ jsx
       <input ref={this.myRef} />
 ```
 
-### [组件中的状态](./src/03-other/state.js)
+### 2. [组件中的状态](./src/03-other/state.js)
 
 
 重点！重点！在class组件中有一个固定的状态值(类似vue中的data),通过setState方法修改状态值实现数据和视图同步渲染和更新
@@ -101,7 +101,7 @@ handleClick(){
 
   }
 ```
-### [列表渲染](./src/03-other/forEach.js)
+### 3. [列表渲染](./src/03-other/forEach.js)
 
 
 
@@ -110,7 +110,7 @@ handleClick(){
 this.state.list.map((item, index) => <li key={index}>{item}<button onClick={() => this.delClick(index)}>del</button></li>)
 
 ```
-### [条件渲染](./src/03-other/forEach.js)
+### 4. [条件渲染](./src/03-other/forEach.js)
 #### 是否渲染(类似vue中v-if)
 ```
 //标签内容 三目运算也可以使用if推荐三目运算
@@ -124,13 +124,13 @@ this.state.list.map((item, index) => <li key={index}>{item}<button onClick={() =
 ```
 
 
-### [async-state(异步的状态)](./src/03-other/asyncState.js)
+### 5. [async-state(异步的状态)](./src/03-other/asyncState.js)
 异步单项绑定数据特性如下
 1. 如果setState处于异步回调函数中类似setTimeout,Promise,他是同步的更新状态不执行合并操作
 2. 如果setState处于同步函数中进行执行,他将会是异步合并处理的更新状态
 3. setState第二个参数,为视图渲染完毕后执行的callback函数
 
-### [RTF(富文本)](./src/03-other/rtf.js)
+### 6. [RTF(富文本)](./src/03-other/rtf.js)
 
 
 通过设置标签中属性进行HTML标签转义(类似Vue2 v-html)
@@ -140,7 +140,7 @@ this.state.list.map((item, index) => <li key={index}><span dangerouslySetInnerHT
       __html: item
     }}></span><button onClick={() => this.delClick(index)}>del</button></li>)
 ```
-### [props(属性)](./src/03-other/props.js)
+### 7. [props(属性)](./src/03-other/props.js)
 #### 通过属性传参的方式进行父组件向子组件传递
 ```
 <nav value={{title:1}}/>
@@ -188,8 +188,8 @@ NavBar.defaultProps={
 6. 属性可以修改子组件的值,状态不可以
 
 
-## React vs Vue 区别
-### 数据流处理方式
+## 四 区别  React vs Vue 
+### 1. 数据流处理方式
 ```
 //vue双向绑定
 <input v-model="value">
@@ -203,16 +203,16 @@ NavBar.defaultProps={
 }}>
 
 ```
-## 四 Demo
-### [Demo-选项卡](./src/04-demo/tabBar.js)
+## 五 Demo
+### 1. [Demo-选项卡](./src/04-demo/tabBar.js)
 
 通过模块化的方式实现tabBar切换
 
-### [Demo-axios](./src/04-demo/axios.js)
+### 2. [Demo-axios](./src/04-demo/axios.js)
 
 在react中使用axios进行网络请求
 
-###  [Demo-better-scroll](./src/04-demo/better-scroll.js)
+###  3. [Demo-better-scroll](./src/04-demo/better-scroll.js)
 
 主要测试了setState方法后dom更新状态
 
