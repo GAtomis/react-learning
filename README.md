@@ -144,7 +144,12 @@ this.state.list.map((item, index) => <li key={index}><span dangerouslySetInnerHT
 ### `props(属性)`
 #### 通过属性传参的方式进行父组件向子组件传递
 ```
-<nav :value={{title:1}}/>
+<nav value={{title:1}}/>
+//拓展运算符
+const obj ={title:"周楠",isShow:true}
+<nav {...obj}>
+//上方等价
+<nav title={obj.title} isShow={obj.isShow}>
 ```
 #### 子组件接受参数
 ```
@@ -172,6 +177,18 @@ NavBar.defaultProps={
     isShow:true
   }
 ```
+#### props函数式组件
+通过形参获得props属性
+
+#### 属性vs状态
+1. 属性能从父组件获取,状态不能
+2. 属性可以由父组件修改，状态不能
+3. 属性状态都可以设默认值,方式不一样
+4. 属性子组件内部不可以修改,状态组件内部进行修改
+5. 属性设置子组件初始值，状态不可以
+6. 属性可以修改子组件的值,状态不可以
+
+
 
 ### Demo-选项卡
 [案例](./src/04-demo/tabBar.js)
@@ -181,7 +198,7 @@ NavBar.defaultProps={
 [案例](./src/04-demo/axios.js)
 在react中使用axios进行网络请求
 
-### better-scroll 
+### Demo-better-scroll 
 [案例](./src/04-demo/better-scroll.js)
 主要测试了setState方法后dom更新状态
 
