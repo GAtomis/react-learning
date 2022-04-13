@@ -61,9 +61,7 @@ export default const FP=(params)=><h1>函数式组件</h1>
 
 
 ## 三 综合
-### ref(获取DOM或组件)
-[案例](./src/03-other/ref)
-
+### [ref](./src/03-other/ref)
 获取组件或者当前dom,react17推荐以下方式获取
 js
 ```
@@ -78,8 +76,8 @@ jsx
       <input ref={this.myRef} />
 ```
 
-### `组件中的状态`
-[案例](./src/03-other/state.js)
+### [组件中的状态](./src/03-other/state.js)
+
 
 重点！重点！在class组件中有一个固定的状态值(类似vue中的data),通过setState方法修改状态值实现数据和视图同步渲染和更新
 个人理解将组件转化为vnode进行diff比较进行视图更新
@@ -103,8 +101,8 @@ handleClick(){
 
   }
 ```
-### `列表渲染`
-[案例](./src/03-other/forEach.js)
+### [列表渲染](./src/03-other/forEach.js)
+
 
 
 通过map迭代插入jsx进行列表渲染
@@ -126,15 +124,14 @@ this.state.list.map((item, index) => <li key={index}>{item}<button onClick={() =
 ```
 
 
-### async-state(异步单项绑定数据特性)
-[案例](./src/03-other/asyncState.js)
-特性
+### [async-state]](./src/03-other/asyncState.js)
+异步单项绑定数据特性如下
 1. 如果setState处于异步回调函数中类似setTimeout,Promise,他是同步的更新状态不执行合并操作
 2. 如果setState处于同步函数中进行执行,他将会是异步合并处理的更新状态
 3. setState第二个参数,为视图渲染完毕后执行的callback函数
 
-### RTF(富文本)
-[案例](./src/03-other/rtf.js)
+### [RTF(富文本)](./src/03-other/rtf.js)
+
 
 通过设置标签中属性进行HTML标签转义(类似Vue2 v-html)
 ```
@@ -143,7 +140,7 @@ this.state.list.map((item, index) => <li key={index}><span dangerouslySetInnerHT
       __html: item
     }}></span><button onClick={() => this.delClick(index)}>del</button></li>)
 ```
-### `props(属性)`
+### [props(属性)](./src/03-other/props.js)
 #### 通过属性传参的方式进行父组件向子组件传递
 ```
 <nav value={{title:1}}/>
@@ -207,16 +204,16 @@ NavBar.defaultProps={
 
 ```
 ## 四 Demo
-### Demo-选项卡
-[案例](./src/04-demo/tabBar.js)
+### [Demo-选项卡](./src/04-demo/tabBar.js)
+
 通过模块化的方式实现tabBar切换
 
-### Demo-axios
-[案例](./src/04-demo/axios.js)
+### [Demo-axios](./src/04-demo/axios.js)
+
 在react中使用axios进行网络请求
 
-### Demo-better-scroll 
-[案例](./src/04-demo/better-scroll.js)
+###  [Demo-better-scroll](./src/04-demo/better-scroll.js)
+
 主要测试了setState方法后dom更新状态
 
 
