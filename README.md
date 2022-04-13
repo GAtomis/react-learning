@@ -110,7 +110,7 @@ handleClick(){
 this.state.list.map((item, index) => <li key={index}>{item}<button onClick={() => this.delClick(index)}>del</button></li>)
 
 ```
-### 条件渲染
+### [条件渲染](./src/03-other/forEach.js)
 #### 是否渲染(类似vue中v-if)
 ```
 //标签内容 三目运算也可以使用if推荐三目运算
@@ -124,7 +124,7 @@ this.state.list.map((item, index) => <li key={index}>{item}<button onClick={() =
 ```
 
 
-### [async-state]](./src/03-other/asyncState.js)
+### [async-state](./src/03-other/asyncState.js)
 异步单项绑定数据特性如下
 1. 如果setState处于异步回调函数中类似setTimeout,Promise,他是同步的更新状态不执行合并操作
 2. 如果setState处于同步函数中进行执行,他将会是异步合并处理的更新状态
