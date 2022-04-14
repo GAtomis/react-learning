@@ -2,7 +2,7 @@
  * @Description: react入口文件
  * @Author: Gavin
  * @Date: 2022-04-02 23:47:53
- * @LastEditTime: 2022-04-13 10:28:36
+ * @LastEditTime: 2022-04-14 10:43:23
  * @LastEditors: Gavin
  */
 import React from 'react'
@@ -23,5 +23,8 @@ import ReactDom from 'react-dom'
 // import App from './03-other/async-state'
 // import App from './04-demo/better-scroll'
 // import App from './03-other/props'
-import App from './03-other/state&props'
+// import App from './03-other/state&props'
+// import App from './04-demo/free-form'
+// import App from './04-demo/control-form'
+import App from './05-advance/child-transfer-parents'
 ReactDom.render(<App></App>,document.getElementById('root'))

@@ -189,20 +189,23 @@ NavBar.defaultProps={
 
 
 ## 四 区别  React vs Vue 
-### 1. 数据流处理方式
+### 1. [数据流处理方式](./src/04-demo/free-form)
 ```
 //vue双向绑定
 <input v-model="value">
 //约等于
-<input :value="value" :onChange="(new)=>(value=new)">
+<input :value="value" :onChange="(e)=>(new=e.target.value)">
 //react 单向数据流
-<input value={this.state.value} onChange={(new)=>{
-  this.setState({
-    value:new
-  })
-}}>
+<input defaultValue={this.state.value} value={this.state.value} type="text" onChange={(e) => {
+ this.setState({value: e.target.value })
+ }}></input>
 
 ```
+### 2.[非受控表单](./src/04-demo/contral-form)
+通过搜索受控进行数据过滤
+
+
+
 ## 五 Demo
 ### 1. [Demo-选项卡](./src/04-demo/tabBar.js)
 
