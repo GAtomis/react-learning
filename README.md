@@ -204,6 +204,32 @@ NavBar.defaultProps={
 ### 2.[非受控表单](./src/04-demo/contral-form)
 通过搜索受控进行数据过滤 
 
+### 子父通讯
+
+vue option-api
+```
+//子
+const params="这就是参数"
+this.$emit("callback",params)
+//父
+<child @callback="(p)=>{
+  list =p
+}">
+```
+react
+```
+//子
+<button onClick={()=>{
+  const params="这就是参数"
+  this.props.callback(params)
+}}/>
+//父
+<child callback={(p)=>this.setState({
+  list:p
+})}
+>
+``` 
+
 
 
 ## 五 Demo
@@ -220,6 +246,10 @@ NavBar.defaultProps={
 主要测试了setState方法后dom更新状态
 
 
+## 五 高阶技巧
+### 1. [CTP(子传父)](./src/05-advance/child-transfer-parents.js)
+之前基础介绍了父组件传子组件数据的机制,现在的介绍子组件传递父组件的方法
+与vue的比较请看上面专栏
 
 
 
