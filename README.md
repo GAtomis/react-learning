@@ -204,7 +204,7 @@ NavBar.defaultProps={
 ### 2.[非受控表单](./src/04-demo/contral-form)
 通过搜索受控进行数据过滤 
 
-### 子父通讯
+### 3. 子父通讯
 
 vue option-api
 ```
