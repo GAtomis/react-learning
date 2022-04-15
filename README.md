@@ -230,9 +230,14 @@ react
 >
 ``` 
 
+## 五 高阶技巧
+### 1. [CTP(子传父)](./src/05-advance/child-transfer-parents.js)
+之前基础介绍了父组件传子组件数据的机制,现在的介绍子组件传递父组件的方法
+与vue的比较请看上面专栏
 
 
-## 五 Demo
+
+## Demo
 ### 1. [Demo-选项卡](./src/04-demo/tabBar.js)
 
 通过模块化的方式实现tabBar切换
@@ -246,10 +251,6 @@ react
 主要测试了setState方法后dom更新状态
 
 
-## 五 高阶技巧
-### 1. [CTP(子传父)](./src/05-advance/child-transfer-parents.js)
-之前基础介绍了父组件传子组件数据的机制,现在的介绍子组件传递父组件的方法
-与vue的比较请看上面专栏
 
 
 
