@@ -2,7 +2,7 @@
  * @Description: react入口文件
  * @Author: Gavin
  * @Date: 2022-04-02 23:47:53
- * @LastEditTime: 2022-04-15 00:23:41
+ * @LastEditTime: 2022-04-17 02:15:09
  * @LastEditors: Gavin
  */
 import React from 'react'
@@ -26,5 +26,6 @@ import ReactDom from 'react-dom'
 // import App from './03-other/state&props'
 // import App from './04-demo/free-form'
 // import App from './04-demo/control-form'
-import App from './05-advance/child-transfer-parents'
+// import App from './04-demo/field-form'
+import App from './04-demo/ref-form'
 ReactDom.render(<App></App>,document.getElementById('root'))
