@@ -231,10 +231,14 @@ react
 ``` 
 
 ## 五 高阶技巧
-### 1. [CTP(子传父)](./src/05-advance/child-transfer-parents.js)
+### 1.父子通信
+* [CTP(子传父)](./src/05-advance/child-transfer-parents.js)
 之前基础介绍了父组件传子组件数据的机制,现在的介绍子组件传递父组件的方法
 与vue的比较请看上面专栏
-
+### 2.非父子通信
+* [状态提升](./src/05-advance/middleman-model.js)通过父组件状态回调改变后,传入兄弟属性使兄弟组件成为受控组件
+* [订阅发布](./src/05-advance/observer.js) 通过发布订阅模式进行组件通讯
+ 
 
 
 ## Demo
@@ -252,8 +256,9 @@ react
 
 ### 4. Demo-组件通信
 
-* [常规子父通信](./src/04-demo/field.js):测试了表单通过子组件回调父组件方法进行传参,从而实现表单受控的案例
+* [常规子父通信](./src/04-demo/field-form.js):测试了表单通过子组件回调父组件方法进行传参,从而实现表单受控的案例
 * [ref子父通信](./src/04-demo/ref-form.js):直接通过ref获取子组件并调用子组件内部方法更新子组件内部状态
+
 
 
 

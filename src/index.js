@@ -2,7 +2,7 @@
  * @Description: react入口文件
  * @Author: Gavin
  * @Date: 2022-04-02 23:47:53
- * @LastEditTime: 2022-04-17 02:15:09
+ * @LastEditTime: 2022-04-19 01:16:44
  * @LastEditors: Gavin
  */
 import React from 'react'
@@ -27,5 +27,7 @@ import ReactDom from 'react-dom'
 // import App from './04-demo/free-form'
 // import App from './04-demo/control-form'
 // import App from './04-demo/field-form'
-import App from './04-demo/ref-form'
+// import App from './04-demo/ref-form'
+// import App from './04-demo/middleman-model'
+import App from './05-advance/observer'
 ReactDom.render(<App></App>,document.getElementById('root'))
