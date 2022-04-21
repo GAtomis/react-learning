@@ -235,6 +235,42 @@ react
 })}
 >
 ``` 
+### slot vs children(插槽)
+vue插槽模式
+```
+//父
+<template   #top>
+  <h1>zhounan</h1>
+</template>
+//子
+<slot name="top">ada</slot>
+```
+react插槽
+```
+//父
+  render() {
+    return (
+      <div>
+        <Item>
+          {/* {全部插槽} */}
+          <h1>slot1</h1>
+          <h1>slot2</h1>
+          <h1>slot3</h1>
+        </Item>
+        <item2>
+          疼的的的
+        </item2>
+      </div>
+    )
+  }
+//子
+  render() {
+    const [frist, send, pend] = this.props.children
+    return (<div>{
+      frist
+    }{send}{pend}</div>)
+  }
+```
 
 ## 五 高阶技巧
 ### 1.父子通信
@@ -245,7 +281,18 @@ react
 * [状态提升](./src/05-advance/middleman-model.js)通过父组件状态回调改变后,传入兄弟属性使兄弟组件成为受控组件
 * [订阅发布](./src/05-advance/observer.js) 通过发布订阅模式进行组件通讯
 * [context](./src/05-advance/context.js)略...
-### 3.插槽
+### 3.[插槽(slot)](./src/05-advance/slot.js)类似vue-slot
+通过props.children对插槽内容进行遍历
+```
+    //可以进行解构代替具名作用
+    const [frist, send, pend] = this.props.children
+    return (<div>{
+      frist
+    }{send}{pend}</div>)
+
+```
+  
+
  
 扫雷
 
