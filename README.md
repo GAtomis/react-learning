@@ -1,6 +1,12 @@
 # 学习笔记
 受到疫情影响,正好有时间去学习除vue以外优秀的前端框架,react作为目前前端生态最好的框架体系,又是函数式编程最好的实现者,抱着敬畏之心去学习他。希望我的学习时间不会很长,时间越多疫情越严重,上海加油!中国加油！-GAto mis
 ##  序章
+### 如何建立react脚手架
+```
+npx create-react-app my-app
+cd my-app
+npm start
+```
 ### 根目录建立
 1. 在src下建立index文件
 2. 将react核心引入
@@ -238,8 +244,10 @@ react
 ### 2.非父子通信
 * [状态提升](./src/05-advance/middleman-model.js)通过父组件状态回调改变后,传入兄弟属性使兄弟组件成为受控组件
 * [订阅发布](./src/05-advance/observer.js) 通过发布订阅模式进行组件通讯
+* [context](./src/05-advance/context.js)略...
+### 3.插槽
  
-
+扫雷
 
 ## Demo
 ### 1. [Demo-选项卡](./src/04-demo/tabBar.js)
@@ -258,6 +266,7 @@ react
 
 * [常规子父通信](./src/04-demo/field-form.js):测试了表单通过子组件回调父组件方法进行传参,从而实现表单受控的案例
 * [ref子父通信](./src/04-demo/ref-form.js):直接通过ref获取子组件并调用子组件内部方法更新子组件内部状态
+
 
 
 
