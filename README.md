@@ -282,7 +282,7 @@ react插槽
 * [订阅发布](./src/05-advance/observer.js) 通过发布订阅模式进行组件通讯
 * [context](./src/05-advance/context.js)略...
 ### 3.[插槽(slot)](./src/05-advance/slot.js)类似vue-slot
-通过props.children对插槽内容进行遍历
+通过props.children对插槽内容进行遍历,使插槽具名化
 ```
     //可以进行解构代替具名作用
     const [frist, send, pend] = this.props.children
@@ -291,7 +291,30 @@ react插槽
     }{send}{pend}</div>)
 
 ```
-  
+插槽具有一下两个特点
+* 复用性
+* 与父组件状态管理,子父组件状态传递减少
+* 通过数组具名化插槽
+
+### 生命周期
+ [react生命周期](./src/05-advance/life-cycle-hook.js) 
+以下是react重点内容生命周期(为react18推荐的)
+#### Hooks语义化说明
+在IDE中通过插件所有的钩子函数都可以进行快捷输入他们列如CDM(componentDidMount)他们都进有共同的特点
+* 语义相同=>目标内容+时间状态+动作。 will:某行为之前,did:代表某行为之后
+* 传参类型相同 will:为新数据,did:为老数据
+* 一般will关键字都hook已经为react不推荐的方法了
+####  初始化阶段
+* componentDidMount-Dom挂载以后执行的钩子函数,一般用于数据请求
+* render-每次组件渲染的时候都会调用
+#### 运行阶段
+* componentDidUpdate-状态更新后的回调参数
+* shouldComponentUpdate-判断是否进行render
+* render-渲染函数
+
+#### 销毁阶段
+
+
 
  
 扫雷
