@@ -271,6 +271,31 @@ react插槽
     }{send}{pend}</div>)
   }
 ```
+### 生命周期区别
+react和vue生命周期作用
+页面初始化异步数据请求
+```
+//vue 
+mount(){
+}
+//react
+componentDidMount() {
+ // dom已挂载,只执行一次,推荐数据挂载在这里做
+ console.warn("已经挂载", document.getElementById('hook'));
+}
+```
+数据更新
+```
+// vue updated(更新后)
+updated(){}
+//react
+  componentDidUpdate(preProps, perState) {
+
+    console.warn("数据更新后", preProps, perState);
+  }
+其他区别可以去官方文档或者下方生命周期中查看
+
+```
 
 ## 五 高阶技巧
 ### 1.父子通信
@@ -313,8 +338,10 @@ react插槽
 * render-渲染函数
 
 #### 销毁阶段
-
-
+* componentWillUnmount:组件在销毁的时候的操作
+#### 新生命周期
+* static getDerivedStateFromProps-每状态更新和初始化时候回执信并且返回值为最终state结果
+* 
 
  
 扫雷

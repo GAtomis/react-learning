@@ -2,7 +2,7 @@
  * @Description: react入口文件
  * @Author: Gavin
  * @Date: 2022-04-02 23:47:53
- * @LastEditTime: 2022-04-22 09:36:44
+ * @LastEditTime: 2022-04-23 19:52:59
  * @LastEditors: Gavin
  */
 import React from 'react'
@@ -30,6 +30,7 @@ import ReactDom from 'react-dom'
 // import App from './04-demo/ref-form'
 // import App from './04-demo/middleman-model'
 // import App from './05-advance/slot'
-import App from './05-advance/life-cycle-hook'
+// import App from './05-advance/life-cycle-hook'
+import App from './05-advance/react18-new-hook'
 
 ReactDom.render(<App></App>,document.getElementById('root'))
