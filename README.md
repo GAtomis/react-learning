@@ -347,6 +347,10 @@ updated(){}
 #### [通过生命周期优化](./src/05-advance/optimization-hooks.js)
 1. shouldComponentUpdate-通过周期函数去控制组件或者子组件是否进行dom更新
 2. pureComponent-会帮你 比较新props 跟 旧的props 新的state和老的state(值相等.或者对象含有相同的属性，且属性值相等),决定shouldcomponentUpdate 返回true或者false,从而决定要不要呼叫render function
+```
+//会优化的你的diff算法 不会无脑一直渲染
+export default class optimizationHooks extends PureComponent{}
+```
 
    
 
