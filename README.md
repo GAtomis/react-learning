@@ -1,5 +1,5 @@
 # 学习笔记
-受到疫情影响,正好有时间去学习除vue以外优秀的前端框架,react作为目前前端生态最好的框架体系,又是函数式编程最好的实现者,抱着敬畏之心去学习他。希望我的学习时间不会很长,时间越多疫情越严重,上海加油!中国加油！-GAto mis
+受到疫情影响,正好有时间去学习除vue以外优秀的前端框架,react作为目前前端生态最好的框架体系,又是函数式编程最好的实现者,抱着敬畏之心去学习他。希望我的学习时间不会很长,时间越多疫情越严重,上海加油!中国加油！-GAtomis
 ##  序章
 ### 如何建立react脚手架
 ```
@@ -296,6 +296,9 @@ updated(){}
 其他区别可以去官方文档或者下方生命周期中查看
 
 ```
+### Composition API VS React hooks
+vue3 hooks和React hooks有异曲同工之妙,都是解决的了组件内面条式代码问题,把业务逻辑归类在一处
+
 
 ## 五 高阶技巧
 ### 1.父子通信
@@ -351,11 +354,24 @@ updated(){}
 //会优化的你的diff算法 不会无脑一直渲染
 export default class optimizationHooks extends PureComponent{}
 ```
+## React Hooks
+通过是用函数式组件进行组件的自定义编写
+### useState 定义状态
+通过解构的方式去按需引入useState
+```
+  //0:当前状态的键 1:对应键的set方法
+  const [list,setList]=useState(['疼的','我的'])
+  //打印状态的值
+  conlose.log(list)
+  //修改状态
+  setList([...list,"zhangxiaonan"])
+```
+
 
    
 
  
-扫雷
+
 
 ## Demo
 ### 1. [Demo-选项卡](./src/04-demo/tabBar.js)

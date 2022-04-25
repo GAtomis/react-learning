@@ -2,13 +2,13 @@
  * @Description: 性能优化通过生命周期
  * @Author: Gavin
  * @Date: 2022-04-24 20:12:23
- * @LastEditTime: 2022-04-24 20:18:46
+ * @LastEditTime: 2022-04-25 10:59:55
  * @LastEditors: Gavin
  */
 
-import React, { Component } from 'react'
+import React, { Component,PureComponent } from 'react'
 
-export default class optimizationHooks extends Component {
+export default class optimizationHooks extends PureComponent {
   state={
     title:"zhounan"
   }

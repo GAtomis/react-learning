@@ -2,7 +2,7 @@
  * @Description: 新生命周期
  * @Author: Gavin
  * @Date: 2022-04-23 19:25:57
- * @LastEditTime: 2022-04-24 12:29:48
+ * @LastEditTime: 2022-04-25 10:59:37
  * @LastEditors: Gavin
  */
 import React, { Component } from 'react'
@@ -34,8 +34,6 @@ class Child extends Component{
   render(){
     console.log('render');
     return (<div>{this.state.name}
-    
-    
     </div>)
   }
 
