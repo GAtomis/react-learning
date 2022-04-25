@@ -371,8 +371,8 @@ export default class optimizationHooks extends PureComponent{}
   //修改状态
   setList([...list,"zhangxiaonan"])
 ```
-### useEffect 副作用
-#### 通常
+### useEffect(副作用)
+#### [通常功能](./src/06-hooks/useEffect.js)
 当函数式组件创立的时候会调用effect,通过参数更变进行回调函数调用
 ```
 //定义一个副作用 useEffect:(fn:()=>void,list?:any[]) fn:回调函数,list:可选监听状态(为空则只执行一次)
@@ -380,7 +380,7 @@ useEffect(()=>{
   副作用
 },[stateKey])
 ```
-#### 销毁函数
+#### [销毁函数](./src/06-hooks/useEffect2.js)
 useEffect承担取消定时器或监听事件
 ```
 //在当做销毁函数执行时 必须将第二个参数为空数组或者是未定义状态,将回调函数return函数当做销毁函数使用
