@@ -361,7 +361,7 @@ export default class optimizationHooks extends PureComponent{}
 ```
 ## React Hooks
 通过是用函数式组件进行组件的自定义编写
-### useState 定义状态
+### [useState(定义状态)](./src/06-hooks/useState.js)
 通过解构的方式去按需引入useState
 ```
   //0:当前状态的键 1:对应键的set方法
