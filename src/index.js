@@ -2,7 +2,7 @@
  * @Description: react入口文件
  * @Author: Gavin
  * @Date: 2022-04-02 23:47:53
- * @LastEditTime: 2022-04-25 10:17:04
+ * @LastEditTime: 2022-04-25 23:07:29
  * @LastEditors: Gavin
  */
 import React from 'react'
@@ -32,6 +32,6 @@ import ReactDom from 'react-dom'
 // import App from './05-advance/slot'
 // import App from './05-advance/life-cycle-hook'
 // import App from './05-advance/optimization-hooks'
-import App from './06-hooks/useState'
+import App from './06-hooks/useEffect2'
 
 ReactDom.render(<App></App>,document.getElementById('root'))

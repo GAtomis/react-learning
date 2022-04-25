@@ -297,7 +297,12 @@ updated(){}
 
 ```
 ### Composition API VS React hooks
-vue3 hooks和React hooks有异曲同工之妙,都是解决的了组件内面条式代码问题,把业务逻辑归类在一处
+vue3 hooks和React hooks有异曲同工之妙
+* vue hooks可以单独描述一段逻辑作为函数式逻辑处理
+* 都是解决的了组件内面条式代码问题,把业务逻辑归类在一处,解决代码组织性问题
+* react hook在每次state更变时都会重新执行整个hooks ,vue是把get和set合并在一起变成一个叫ref 
+* setup(vue) 初始化只执行一次,收集完数据依赖关系后,后续根据会执行watch和compute里的副作用
+
 
 
 ## 五 高阶技巧
@@ -366,7 +371,26 @@ export default class optimizationHooks extends PureComponent{}
   //修改状态
   setList([...list,"zhangxiaonan"])
 ```
-
+### useEffect 副作用
+#### 通常
+当函数式组件创立的时候会调用effect,通过参数更变进行回调函数调用
+```
+//定义一个副作用 useEffect:(fn:()=>void,list?:any[]) fn:回调函数,list:可选监听状态(为空则只执行一次)
+useEffect(()=>{
+  副作用
+},[stateKey])
+```
+#### 销毁函数
+useEffect承担取消定时器或监听事件
+```
+//在当做销毁函数执行时 必须将第二个参数为空数组或者是未定义状态,将回调函数return函数当做销毁函数使用
+useEffect(()=>{
+  副作用...
+  return function destroy{ //可以写匿名函数
+  销毁
+  } 
+},[])
+```
 
    
 
