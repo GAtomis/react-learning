@@ -391,6 +391,10 @@ useEffect(()=>{
   } 
 },[])
 ```
+#### useLayoutEffect
+建议在useLayoutEffect中进行DOM修改,在useLayoutEffect时渲染dom还未在浏览器中渲染,仅在内存中渲染,这样做的目的是为了避免回流的出现从而影响性能。
+#### 
+
 
    
 
