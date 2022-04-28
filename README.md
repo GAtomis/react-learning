@@ -360,7 +360,7 @@ vue3 hooks和React hooks有异曲同工之妙
 export default class optimizationHooks extends PureComponent{}
 ```
 ## React Hooks
-通过是用函数式组件进行组件的自定义编写
+通过是用函数式组件进行组件的自定义编写,函数式组件默认是无状态且只执行一次,但是useState的加入时函数式组件可以更新状态,每次状态更新都会重新执行函数
 ### [useState(定义状态)](./src/06-hooks/useState.js)
 通过解构的方式去按需引入useState
 ```
@@ -393,7 +393,21 @@ useEffect(()=>{
 ```
 #### useLayoutEffect
 建议在useLayoutEffect中进行DOM修改,在useLayoutEffect时渲染dom还未在浏览器中渲染,仅在内存中渲染,这样做的目的是为了避免回流的出现从而影响性能。
-#### 
+
+### useCallback(记忆函数)
+react hook特性前面提过当state更新时会重新执行一边hooks,这就导致所有在当前context的声明的内容都会被重新init,useCallback就是解决这个问题,通过第二个参数去接触冻结状态,如果第二参数中的变量状态发生了更新则接触冻结状态
+```
+    //保持函数内的状态
+  const handleClick=useCallback(
+    () => {
+      setName(name+"我是更新")
+    },
+    [name],
+  )
+  
+```
+### useMemo
+
 
 
    
