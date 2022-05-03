@@ -298,10 +298,11 @@ updated(){}
 ```
 ### Composition API VS React hooks
 vue3 hooks和React hooks有异曲同工之妙
-* vue hooks可以单独描述一段逻辑作为函数式逻辑处理
 * 都是解决的了组件内面条式代码问题,把业务逻辑归类在一处,解决代码组织性问题
 * react hook在每次state更变时都会重新执行整个hooks ,vue是把get和set合并在一起变成一个叫ref 
 * setup(vue) 初始化只执行一次,收集完数据依赖关系后,后续根据会执行watch和compute里的副作用
+* 如何精准的控制函数式组件重载是个头疼的问题,需要对react函数式系统的理解,vue没有这个行为
+* 都可以单独抽离逻辑,但是提出这个概念的是react在16.8版本提供的
 
 
 
