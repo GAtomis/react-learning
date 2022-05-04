@@ -2,7 +2,7 @@
  * @Description: 请输入....
  * @Author: Gavin
  * @Date: 2022-04-27 21:48:26
- * @LastEditTime: 2022-05-04 23:12:33
+ * @LastEditTime: 2022-05-05 01:42:58
  * @LastEditors: Gavin
  */
 import react, { useEffect, useState,useMemo } from 'react'
@@ -24,7 +24,7 @@ export function useAxios(params) {
       setProdList(list)
     })
 
-    flowerNumber(2)
+    console.error(flowerNumber(2));
 
   },[])
   return {titleState:[title, setTitle] ,prodListState:[prodList,setProdList]}
