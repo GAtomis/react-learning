@@ -34,6 +34,7 @@ import ReactDom from 'react-dom'
 // import App from './05-advance/optimization-hooks'
 // import App from './06-hooks/useRef'
 // import App from './06-hooks/useReducer'
-import App from './06-hooks/customize-hooks'
+import App from './07-router/started'
 
-ReactDom.render(<App></App>,document.getElementById('root'))
+
+ReactDom.render(<App></App>, document.getElementById('root'))

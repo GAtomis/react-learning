@@ -434,7 +434,7 @@ ref有两个作用 一个是获取dom,另一个是保存一个属性不守状态
  
 
 
-## Demo
+##  六 Demo
 ### 1. [Demo-选项卡](./src/04-demo/tabBar.js)
 
 通过模块化的方式实现tabBar切换
@@ -455,7 +455,14 @@ ref有两个作用 一个是获取dom,另一个是保存一个属性不守状态
 
 
 
-
+## 七 react-router-dom@6 V6
+### 安装命令
+```
+//安装vue6
+yarn add react-router-dom@6
+//npm安装
+npm install react-router-dom@6 -s
+```
 
 
 

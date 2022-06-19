@@ -26,8 +26,6 @@ function InputForm(props) {
     return (<div>
         <input  value={title} onChange={e=>handleInput(e.target.value)}></input>
         <button>搜索</button>
-
-
     </div>)
 }
 function GoodList(props) {
