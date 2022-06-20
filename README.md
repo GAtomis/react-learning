@@ -506,6 +506,43 @@ Route用于指定导航链接，完成路由匹配 当路径匹配时跳到对�
 3. 执行跳转函数完成跳转
 4. replace为true 不会回退
 
+#### useNavigate 
+常规
+```
+//通过nav方式进行路由跳转
+const nav=useNavigate()
+nav('/about')
+```
+replace
+```
+//replace
+const nav=useNavigate()
+nav('/about',{replace:true})
+```
+#### 传参模式
+searchParams模式
+```
+//跳转
+const nav=useNavigate()
+nav('/about?id=1233')
+//取参
+  const [params] = useSearchParams()
+  const id = params.get('id')
+```
+params模式(需要在路由配置中配置动态路由)
+```
+//跳转
+const nav=useNavigate()
+nav('/about/233')
+//配置
+ <Route path="/home/:id" element={<Home></Home>} ></Route>
+//取参
+  const [params] = useSearchParams()
+  const id = params.['id']
+
+```
+
+
 
 
 ## END 项目启动
