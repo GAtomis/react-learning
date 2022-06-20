@@ -2,7 +2,7 @@
  * @Description: react入口文件
  * @Author: Gavin
  * @Date: 2022-04-02 23:47:53
- * @LastEditTime: 2022-05-03 12:05:21
+ * @LastEditTime: 2022-06-20 16:36:08
  * @LastEditors: Gavin
  */
 import React from 'react'
@@ -34,7 +34,8 @@ import ReactDom from 'react-dom'
 // import App from './05-advance/optimization-hooks'
 // import App from './06-hooks/useRef'
 // import App from './06-hooks/useReducer'
-import App from './07-router/started'
+// import App from './07-router/started'
+import App from './07-router/index'
 
 
 ReactDom.render(<App></App>, document.getElementById('root'))

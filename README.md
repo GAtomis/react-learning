@@ -541,8 +541,40 @@ nav('/about/233')
   const id = params.['id']
 
 ```
+#### 嵌套路由
+react使用路由嵌套 进行二级路由
+```
+//路由配置页
+      <Routes>
+        <Route path="/" element={<Layout />} >
+          <Route path="/home" element={<Home />} ></Route>
+          <Route path="/about" element={<About />} ></Route>
+        </Route>
+      </Routes>
 
+```
+一级路由组件设置二级的窗口,必选
+```
+import { Outlet } from 'react-router-dom'
 
+   <Outlet />
+```
+//默认二极首页,通过index关键子去展示默认显示的目录
+```
+    <Routes>
+        <Route path="/" element={<Layout />} >
+          <Route index element={<Home />} ></Route>
+          <Route path="/about" element={<About />} ></Route>
+        </Route>
+      </Routes>
+
+```
+//默认路由匹配
+```
+//404兜底匹配
+   <Route path="*" element={<NotFound />} >
+```
+#### 路由拦截(路由守卫)
 
 
 ## END 项目启动
