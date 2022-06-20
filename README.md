@@ -467,7 +467,44 @@ yarn add react-router-dom@6
 //npm安装
 npm install react-router-dom@6 -s
 ```
+### 基础组建
+#### BrowerRouter 
+这是个history模式的路由模式一般作为react路由初始化模式
+```
+<BrowserRouter>
+建立一个路由模式
+</BrowserRouter>
+```
+#### HashRouter
+这是个hash模式的路由模式一般作为react路由初始化模式
+推荐使用BrowerRouter作为项目路由形式使用（需要后端配合）
+```
+<hashRouter>
+建立一个路由模式
+</hashRouter>
+```
+#### link
+作为路由跳转的标签存在
+```
+  <Link to="/">home</Link>
+  //需要配合声明的Routes标签进行跳转
+```
+#### Routes&Route
+Routes提供路由内容的一个容器,通过不同的route去匹配显示内容
+Route用于指定导航链接，完成路由匹配 当路径匹配时跳到对应组件内
+```
+<Routes>
+<Route path="/about" element="{<About/>}"></Route>
+</Routes>
+```
 
+### 编程式导航
+通过js编程的方式进行路由页面跳转
+语法说明
+1. 倒入useNavigate钩子函数
+2. 执行钩子函数得到跳转函数
+3. 执行跳转函数完成跳转
+4. replace为true 不会回退
 
 
 
