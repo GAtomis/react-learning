@@ -2,11 +2,11 @@
  * @Description: login
  * @Author: Gavin
  * @Date: 2022-06-20 12:03:50
- * @LastEditTime: 2022-06-20 15:56:22
+ * @LastEditTime: 2022-06-21 12:43:35
  * @LastEditors: Gavin
  */
 import React from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, } from 'react-router-dom'
 const Login = (params) => {
   const navigate = useNavigate()
   const goHomeByQuery = (e) => {

@@ -425,7 +425,7 @@ ref有两个作用 一个是获取dom,另一个是保存一个属性不守状态
   const inp=useRef()
 ```
 
-
+### [useEffect](./src/06-hooks//useEffect.js)
 ### [useContext](./src/06-hooks/useContext.js)
 
 
@@ -574,7 +574,11 @@ import { Outlet } from 'react-router-dom'
 //404兜底匹配
    <Route path="*" element={<NotFound />} >
 ```
+#### navLink和Link
+1. nav支持高亮
+2. nav ClassName属性 支持函数判断存活
 #### 路由拦截(路由守卫)
+
 
 
 ## END 项目启动
